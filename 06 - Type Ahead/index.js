@@ -39,3 +39,11 @@ function displayMatches() {
     .join("");
   suggestions.innerHTML = html;
 }
+
+// Selectors for search input
+const searchInput = document.querySelector(".search");
+const suggestions = document.querySelector(".suggestions");
+
+// Eventlistner for search
+searchInput.addEventListener("change", displayMatches);
+searchInput.addEventListener("keyup", displayMatches);
