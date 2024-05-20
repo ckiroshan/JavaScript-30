@@ -51,3 +51,14 @@ const comment = comments.find(function (comment) {
 const comment2 = comments.find((comment) => (comment.id === 823423 ? true : false));
 
 console.log(comment2);
+
+// Array.prototype.findIndex()
+// Find the comment with this ID
+// delete the comment with the ID of 823423
+const index = comments.findIndex((comment) => comment.id === 823423);
+
+console.log(index);
+
+const newComments = [...comments.slice(0, index), ...comments.slice(index + 1)];
+console.table(comments);
+console.table(newComments);
